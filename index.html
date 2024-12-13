@@ -32,6 +32,72 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .form-container {
+            max-width: 80%; /* Set container width to 80% */
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"], textarea {
+            padding: 10px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .footer-message {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -49,23 +115,6 @@
         </div>
     </div>
     <!-- Spinner End -->
-
-    <div class="container-fluid bg-light ps-5 pe-0 d-none d-lg-block">
-        <div class="row gx-0">
-            <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center">
-                </div>
-            </div>
-            <div class="col-md-6 text-center text-lg-end">
-                <div class="position-relative d-inline-flex align-items-center bg-primary text-white top-shape px-5">
-                    <div class="me-3 pe-3 border-end py-2">
-                        <p class="m-0">WebDemo</p>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
 
 
     <!-- Navbar Start -->
@@ -122,7 +171,6 @@
     </nav>
     <!-- Navbar End -->
 
-
     <!-- Full Screen Search Start -->
     <div class="modal fade" id="searchModal" tabindex="-1">
         <div class="modal-dialog modal-fullscreen">
@@ -144,480 +192,153 @@
     <!-- Full Screen Search End -->
 
 
-    <!-- Carousel Start -->
-    <div class="container-fluid p-0">
-        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="w-100" style="height: 800px;" src="img/medi-eqp.jpg" alt="Image">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Since 1986</h5>
-                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Excellence in Medical & Industrial
-                                Solutions</h1>
-
-                            <a href="appointment.html"
-                                class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Quotation</a>
-                            <a href="appointment.html"
-                                class="btn btn-secondary py-md-3 px-md-5 me-3 animated slideInLeft">Vaccancy</a>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="w-100" style="height: 800px;" src="img/med-eqp3.jpg" alt="Image">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Founded in 1986</h5>
-                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Leaders in Medical Gas Systems,
-                                CSSD, & Industrial Products</h1>
-
-                            <a href="appointment.html"
-                                class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Quotation</a>
-                            <a href="appointment.html"
-                                class="btn btn-secondary py-md-3 px-md-5 me-3 animated slideInLeft">Vaccancy</a>
-                        </div>
-                    </div>
-                </div>
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 hero-header mb-5">
+        <div class="row py-3">
+            <div class="col-12 text-center">
+                <h1 class="display-3 text-white animated zoomIn">Division</h1>
+                <a href="index.html" class="h4 text-white">Home</a>
+                <i class="far fa-circle text-white px-2"></i>
+                <a href="" class="h4 text-white">Division</a>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
     </div>
-    <!-- Carousel End -->
+    <!-- Hero End -->
 
 
-    <!-- Banner Start -->
-    <div class="container-fluid banner mb-5">
+
+    <!-- Form Start -->
+    <div class="form-container">
+        <h1>Request for Quotation</h1>
+        <form action="#" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="company">Company Name:</label>
+            <input type="text" id="company" name="company" required>
+
+            <label for="hospital">Hospital Name:</label>
+            <input type="text" id="hospital" name="hospital" required>
+
+            <label for="mobile">Mob. No.:</label>
+            <input type="tel" id="mobile" name="mobile" required>
+
+            <label for="fax">Fax:</label>
+            <input type="text" id="fax" name="fax">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="request">Your Request:</label>
+            <textarea id="request" name="request" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div class="footer-message">
+            <p>Thank you for submitting your request. We will get back to you soon.</p>
+        </div>
+    </div>
+    <!-- Form End -->
+
+
+    <!-- Newsletter Start -->
+    <div class="container-fluid position-relative pt-5 wow fadeInUp" data-wow-delay="0.1s" style="z-index: 1;">
         <div class="container">
-            <div class="row gx-0">
-                <div class="col-lg-4 wow move-left-to-right" data-wow-delay="0.1s">
-                    <img style="height: 300px; width: 400px;" src="./img/med-eqp3.jpg" alt="">
-                </div>
-                <div class="col-lg-4 wow move-left-to-right" data-wow-delay="0.2s">
-                    <img style="height: 300px; width: 400px;" src="./img/medi-eqp.jpg" alt="">
-                </div>
-                <div class="col-lg-4 wow move-left-to-right" data-wow-delay="0.3s">
-                    <img style="height: 300px; width: 400px;" src="./img/med-eqp2.jpg" alt="">
-                </div>
+            <div class="bg-primary p-5">
+                <form class="mx-auto" style="max-width: 600px;">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-white p-3" placeholder="Your Email">
+                        <button class="btn btn-dark px-4">Sign Up</button>
+                    </div>
+                </form>
             </div>
+        </div>
+    </div>
+    <!-- Newsletter End -->
 
-            <!-- Banner Start -->
 
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light py-5 wow fadeInUp" data-wow-delay="0.3s" style="margin-top: -75px;">
+        <div class="container pt-5">
+            <div class="row g-5 pt-4">
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-white mb-4">Information</h3>
+                    <p class="text-light">
+                        Our technical staff and engineers are well trained and having a good experienced from the
+                        designing to implementation of the project.Our staff members are regularly sent to Germany and
+                        UK to upgrade their technical know how
+                        <a href="#" class="text-primary">Eng. Haroon Hamdan</a>.
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-white mb-4">Popular Links</h3>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">Division</a>
+                        <a href="service.html" class="nav-item nav-link">Suppliers</a>
+                        <a href="service.html" class="nav-item nav-link">projects</a>
 
-            <!-- About Start -->
-            <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="container">
-                    <div class="row g-5">
-                        <div class="col-lg-7">
-                            <div class="section-title mb-4">
-                                <h5 class="position-relative d-inline-block text-primary text-uppercase">About Us</h5>
-                                <h1 class="display-5 mb-0">Committed to Excellence in Medical & Industrial Solutions
-                                </h1>
-                            </div>
-                            <h4 class="text-body fst-italic mb-4">Founded in 1986, delivering trusted solutions for
-                                medical gas systems, CSSD, and industrial products.</h4>
-                            <p class="mb-4">With over three decades of experience, Al Watad Medical & Industrial
-                                Products Co. has been a pioneer in providing top-quality solutions for compressed air
-                                systems and advanced air filtration technologies. Our commitment to innovation and
-                                customer satisfaction ensures we stay ahead in delivering unparalleled service and
-                                reliable products.</p>
-                            <div class="row g-3">
-                                <div class="col-sm-6 wow zoomIn" data-wow-delay="0.3s">
-                                    <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Decades of
-                                        Expertise</h5>
-                                    <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Dedicated
-                                        Professionals</h5>
-                                </div>
-                                <div class="col-sm-6 wow zoomIn" data-wow-delay="0.6s">
-                                    <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Innovative
-                                        Solutions</h5>
-                                    <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Trusted by
-                                        Clients</h5>
-                                </div>
-                            </div>
-                            <a href="contact.html" class="btn btn-primary py-3 px-5 mt-4 wow zoomIn"
-                                data-wow-delay="0.6s">Contact Us</a>
-                        </div>
-                        <div class="col-lg-5" style="min-height: 500px;">
-                            <div class="position-relative h-100">
-                                <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s"
-                                    src="img/medi-equ-abt2.jpg" style="object-fit: cover;">
-                            </div>
-                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-white mb-4">Get In Touch</h3>
+                    <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>Jeddah, Saudi Arabia</p>
+                    <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>info@alwatad.sa</p>
+                    <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+966 123 456 789</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-white mb-4">Follow Us</h3>
+                    <div class="d-flex">
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i
+                                class="fab fa-twitter fw-normal"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i
+                                class="fab fa-facebook-f fw-normal"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i
+                                class="fab fa-linkedin-in fw-normal"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded" href="#"><i
+                                class="fab fa-instagram fw-normal"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- About End -->
-
-
-        <!-- Appointment Start -->
-        <!-- <div class="container-fluid bg-primary bg-appointment my-5 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="container">
-                    <div class="row gx-5">
-                        <div class="col-lg-6 py-5">
-                            <div class="py-5">
-                                <h1 class="display-5 text-white mb-4">We Are A Certified and Award Winning Dental Clinic
-                                    You Can Trust</h1>
-                                <p class="text-white mb-0">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing
-                                    kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea
-                                    invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo
-                                    invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata
-                                    takimata sanctus sed.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="appointment-form h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn"
-                                data-wow-delay="0.6s">
-                                <h1 class="text-white mb-4">Make Appointment</h1>
-                                <form>
-                                    <div class="row g-3">
-                                        <div class="col-12 col-sm-6">
-                                            <select class="form-select bg-light border-0" style="height: 55px;">
-                                                <option selected>Select A Service</option>
-                                                <option value="1">Service 1</option>
-                                                <option value="2">Service 2</option>
-                                                <option value="3">Service 3</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-12 col-sm-6">
-                                            <select class="form-select bg-light border-0" style="height: 55px;">
-                                                <option selected>Select Doctor</option>
-                                                <option value="1">Doctor 1</option>
-                                                <option value="2">Doctor 2</option>
-                                                <option value="3">Doctor 3</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-12 col-sm-6">
-                                            <input type="text" class="form-control bg-light border-0"
-                                                placeholder="Your Name" style="height: 55px;">
-                                        </div>
-                                        <div class="col-12 col-sm-6">
-                                            <input type="email" class="form-control bg-light border-0"
-                                                placeholder="Your Email" style="height: 55px;">
-                                        </div>
-                                        <div class="col-12 col-sm-6">
-                                            <div class="date" id="date1" data-target-input="nearest">
-                                                <input type="text"
-                                                    class="form-control bg-light border-0 datetimepicker-input"
-                                                    placeholder="Appointment Date" data-target="#date1"
-                                                    data-toggle="datetimepicker" style="height: 55px;">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6">
-                                            <div class="time" id="time1" data-target-input="nearest">
-                                                <input type="text"
-                                                    class="form-control bg-light border-0 datetimepicker-input"
-                                                    placeholder="Appointment Time" data-target="#time1"
-                                                    data-toggle="datetimepicker" style="height: 55px;">
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <button class="btn btn-dark w-100 py-3" type="submit">Make
-                                                Appointment</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+    </div>
+    <div class="container-fluid text-light py-4" style="background: #051225;">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-md-0">&copy; <a class="text-white border-bottom" href="#">WebDemo@</a>. All Rights
+                        Reserved.</p>
                 </div>
-            </div> -->
-        <!-- Appointment End -->
-
-
-        <!-- Service Start -->
-
-        <!-- Service End -->
-
-
-        <!-- Offer Start -->
-
-        <!-- Offer End -->
-
-
-        <!-- Pricing Start -->
-        <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="row g-5">
-                    <div class="col-lg-5">
-                        <div class="section-title mb-4">
-                            <h5 class="position-relative d-inline-block text-primary text-uppercase">Our Expertise
-                            </h5>
-                            <h1 class="display-5 mb-0">Leading Providers in Medical Gas & Industrial Systems</h1>
-                        </div>
-                        <p class="mb-4">Al Watad Medical & Industrial Products Co. has been a leader in providing
-                            medical gas systems, CSSD, and industrial products since 1986. We specialize in the
-                            design, installation, and commissioning of medical gas systems, ensuring the highest
-                            standards in patient care and operational efficiency.</p>
-                        <h5 class="text-uppercase text-primary wow fadeInUp" data-wow-delay="0.3s">Call for
-                            Consultation</h5>
-                        <h1 class="wow fadeInUp" data-wow-delay="0.6s">+012 345 6789</h1>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="owl-carousel price-carousel wow zoomIn" data-wow-delay="0.9s">
-                            <div class="price-item pb-4">
-                                <div class="position-relative">
-                                    <img style="width: 500px;height: 200px;" class="img-fluid rounded-top"
-                                        src="https://th.bing.com/th/id/R.c48f4a0fc02aa94e87c07ac4967ded57?rik=ObwfJgvtdKOwXw&riu=http%3a%2f%2fwatad-sa.com%2fimg%2fteaser_image.jpg&ehk=0%2fYWgqkD989LCJcIlzlB%2f0zFGUjoQUWSVlUZSwNgUuQ%3d&risl=&pid=ImgRaw&r=0"
-                                        alt="">
-                                    <div class="d-flex align-items-center justify-content-center bg-light rounded pt-2 px-3 position-absolute top-100 start-50 translate-middle"
-                                        style="z-index: 2;">
-                                        <h3 class="text-primary m-0">Medical GasSystems</h3>
-                                    </div>
-                                </div>
-                                <div
-                                    class="position-relative text-center bg-light border-bottom border-primary py-5 p-4">
-                                    <h4>Design & Installation</h4>
-                                    <hr class="text-primary w-50 mx-auto mt-0">
-                                    <div class="d-flex justify-content-between mb-3"><span>Customized
-                                            Solutions</span><i class="fa fa-check text-primary pt-1"></i></div>
-                                    <div class="d-flex justify-content-between mb-3"><span>Certified
-                                            Engineers</span><i class="fa fa-check text-primary pt-1"></i></div>
-                                    <div class="d-flex justify-content-between mb-2"><span>24/7 Support</span><i
-                                            class="fa fa-check text-primary pt-1"></i></div>
-                                    <a href="appointment.html"
-                                        class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">Request
-                                        for Demo</a>
-                                </div>
-                            </div>
-                            <div class="price-item pb-4">
-                                <div class="position-relative">
-                                    <img style="width: 500px;height: 175px;" class="img-fluid rounded-top"
-                                        src="img/cssd-system.jpg" alt="">
-                                    <div class="d-flex align-items-center justify-content-center bg-light rounded pt-2 px-3 position-absolute top-100 start-50 translate-middle"
-                                        style="z-index: 2;">
-                                        <h2 class="text-primary m-0">CSSD Systems</h2>
-                                    </div>
-                                </div>
-                                <div
-                                    class="position-relative text-center bg-light border-bottom border-primary py-5 p-4">
-                                    <h4>Installation & Maintenance</h4>
-                                    <hr class="text-primary w-50 mx-auto mt-0">
-                                    <div class="d-flex justify-content-between mb-3"><span>Hospitals &
-                                            Clinics</span><i class="fa fa-check text-primary pt-1"></i></div>
-                                    <div class="d-flex justify-content-between mb-3"><span>High-Quality
-                                            Standards</span><i class="fa fa-check text-primary pt-1"></i></div>
-                                    <div class="d-flex justify-content-between mb-2"><span>Efficient
-                                            Systems</span><i class="fa fa-check text-primary pt-1"></i></div>
-                                    <a href="appointment.html"
-                                        class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">Request
-                                        for Demo</a>
-                                </div>
-                            </div>
-                            <div class="price-item pb-4">
-                                <div class="position-relative">
-                                    <img style="width: 500px;height: 200px;" class="img-fluid rounded-top"
-                                        src="img/price-3.jpg" alt="">
-                                    <div class="d-flex align-items-center justify-content-center bg-light rounded pt-2 px-3 position-absolute top-100 start-50 translate-middle"
-                                        style="z-index: 2;">
-                                        <h2 class="text-primary m-0">Industrial Products</h2>
-                                    </div>
-                                </div>
-                                <div
-                                    class="position-relative text-center bg-light border-bottom border-primary py-5 p-4">
-                                    <h4>Supply & Installation</h4>
-                                    <hr class="text-primary w-50 mx-auto mt-0">
-                                    <div class="d-flex justify-content-between mb-3"><span>Customized
-                                            Solutions</span><i class="fa fa-check text-primary pt-1"></i></div>
-                                    <div class="d-flex justify-content-between mb-3"><span>Experienced
-                                            Staff</span><i class="fa fa-check text-primary pt-1"></i></div>
-                                    <div class="d-flex justify-content-between mb-2"><span>Proven
-                                            Reliability</span><i class="fa fa-check text-primary pt-1"></i></div>
-                                    <a href="appointment.html"
-                                        class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">Request
-                                        for Demo</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed by <a class="text-white border-bottom"
+                            href="https://htmlcodex.com">ZenoxSoftwares</a><br>
+                    </p>
                 </div>
             </div>
         </div>
-
-        <!-- Pricing End -->
-
-
-        <!-- Testimonial Start -->
-
-        <!-- Testimonial End -->
+    </div>
+    <!-- Footer End -->
 
 
-        <!-- Team Start -->
-        <style>
-            .project-item {
-                height: 250px;
-                /* Set a fixed height */
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                padding: 20px;
-            }
-        </style>
-
-        <div class="container-fluid py-5">
-            <div class="container">
-                <div class="row g-5">
-                    <div class="col-lg-12 text-center mb-5">
-                        <div class="section-title bg-light rounded p-4 d-inline-block">
-                            <h5 class="position-relative d-inline-block text-primary text-uppercase">Our Projects
-                            </h5>
-                            <h1 class="display-6 mb-4">Discover Some of Our Accomplished Projects</h1>
-                            <p>We take pride in having delivered impactful projects across Saudi Arabia, including
-                                hospitals and specialized facilities.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 wow slideInUp" data-wow-delay="0.1s">
-                        <div class="project-item bg-light text-center rounded">
-                            <h4 class="mb-2">SGH</h4>
-                            <p class="text-primary">Locations: Jeddah, Madinah, Asser, Riyadh</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 wow slideInUp" data-wow-delay="0.3s">
-                        <div class="project-item bg-light text-center rounded">
-                            <h4 class="mb-2">Magrabi Group</h4>
-                            <p class="text-primary">Locations: Jeddah, Dammam, Khamis</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 wow slideInUp" data-wow-delay="0.6s">
-                        <div class="project-item bg-light text-center rounded">
-                            <h4 class="mb-2">King Abdul Aziz Specialist Hospital</h4>
-                            <p class="text-primary">500 Bed Capacity</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 wow slideInUp" data-wow-delay="0.1s">
-                        <div class="project-item bg-light text-center rounded">
-                            <h4 class="mb-2">Maternity & Pediatric Hospital</h4>
-                            <p class="text-primary">MOH, 200 Bed Capacity</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 wow slideInUp" data-wow-delay="0.3s">
-                        <div class="project-item bg-light text-center rounded">
-                            <h4 class="mb-2">Multiple 150 Bed Hospitals</h4>
-                            <p class="text-primary">MOH Locations: Sabia, Khamis, Haqel, and more in Jeddah</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
-        <!-- Team End -->
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="lib/twentytwenty/jquery.event.move.js"></script>
+    <script src="lib/twentytwenty/jquery.twentytwenty.js"></script>
 
-
-        <!-- Newsletter Start -->
-        <div class="container-fluid position-relative pt-5 wow fadeInUp" data-wow-delay="0.1s" style="z-index: 1;">
-            <div class="container">
-                <div class="bg-primary p-5">
-                    <form class="mx-auto" style="max-width: 600px;">
-                        <div class="input-group">
-                            <input type="text" class="form-control border-white p-3" placeholder="Your Email">
-                            <button class="btn btn-dark px-4">Sign Up</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <!-- Newsletter End -->
-
-
-        <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light py-5 wow fadeInUp" data-wow-delay="0.3s"
-            style="margin-top: -75px;">
-            <div class="container pt-5">
-                <div class="row g-5 pt-4">
-                    <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">About Al Watad Est.</h3>
-                        <p class="text-light">
-                            Al Watad Est. is a leading distributor of medical gas equipment in Saudi Arabia.
-                            Our office is located in Jeddah, Saudi Arabia. Click below to learn more about
-                            <a href="#" class="text-primary">Eng. Haroon Hamdan</a>.
-                        </p>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Popular Links</h3>
-                        <div class="d-flex flex-column justify-content-start">
-                            <a href="index.html" class="nav-item nav-link active">Home</a>
-                            <a href="about.html" class="nav-item nav-link">Division</a>
-                            <a href="service.html" class="nav-item nav-link">Suppliers</a>
-                            <a href="service.html" class="nav-item nav-link">projects</a>
-                      
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Get In Touch</h3>
-                        <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>Jeddah, Saudi Arabia</p>
-                        <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>info@alwatad.sa</p>
-                        <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+966 123 456 789</p>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Follow Us</h3>
-                        <div class="d-flex">
-                            <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i
-                                    class="fab fa-twitter fw-normal"></i></a>
-                            <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i
-                                    class="fab fa-facebook-f fw-normal"></i></a>
-                            <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i
-                                    class="fab fa-linkedin-in fw-normal"></i></a>
-                            <a class="btn btn-lg btn-primary btn-lg-square rounded" href="#"><i
-                                    class="fab fa-instagram fw-normal"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid text-light py-4" style="background: #051225;">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-md-6 text-center text-md-start">
-                        <p class="mb-md-0">&copy; <a class="text-white border-bottom" href="#">WebDemo@</a>. All Rights
-                            Reserved.</p>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <p class="mb-0">Designed by <a class="text-white border-bottom"
-                                href="https://htmlcodex.com">ZenoxSoftwares</a><br>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer End -->
-
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
-
-
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/tempusdominus/js/moment.min.js"></script>
-        <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-        <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-        <script src="lib/twentytwenty/jquery.event.move.js"></script>
-        <script src="lib/twentytwenty/jquery.twentytwenty.js"></script>
-
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
